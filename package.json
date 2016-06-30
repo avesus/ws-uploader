@@ -1,0 +1,24 @@
+{
+  "name": "ws-uploader",
+  "version": "1.0.0",
+  "description": "Server-controlled files uploader over WebSockets. Supports uploading of arbitrary file parts and splitting of uploads between multiple servers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avesus/ws-uploader.git"
+  },
+  "keywords": [
+    "upload",
+    "websocket",
+    "partial"
+  ],
+  "author": "Ivan Borisenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/avesus/ws-uploader/issues"
+  },
+  "homepage": "https://github.com/avesus/ws-uploader#readme"
+}
