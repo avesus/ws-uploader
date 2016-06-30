@@ -60,12 +60,20 @@ video players with HTTP Byte Serving protocol allowing ff/rewind operations.
 
 # Idea
 The idea behind this library is to allow to upload files and data simultaneously and robustly over multiple servers.
-1. Browser client sends ('publishes') information about information it has to the controlling server.
+
+1. Controlling server supplies client with information about available upload servers.
+Client connects to all of them to maintain connection, measures ping between each of them.
+
+2. Browser client sends ('publishes') information about information it has to the controlling server.
 Controlling server is usually the same where you serve your REST APIs.
 These information are large text snippets and data from clipboard.
 Short messages are supplied directly to controlling server.
-2. Controlling server supplies client with information about available upload servers.
-Client connects to all of them to maintain connection.
+
 3. Contolling server sends request to client about which part of information it needs to transmit
 to which upload server.
+
+4. Client provides this library with uploading tasks specifying parts of data which are necessary to upload
+and uploading targets specifying how this data should flow into uploading servers. Usually a file goes to only its own uploading server,
+but it can be split between multiple uploading servers when downloading by multiple clients or via not HTTP-based protocol.
+
 
