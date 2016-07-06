@@ -29,6 +29,9 @@ Upload servers even can be hosted over NATs and their TCP connection endpoint be
 Browser code, user of this library. Interacts with user, controlling server and upload servers.
 
 ## Uploading techniques
+
+### AJAX multipart/form-data
+
 Data in buffer memory can be uploaded both thru controlling server or upload server
 by means of AJAX request or WebSocket message.
 
@@ -73,7 +76,10 @@ Short messages are supplied directly to controlling server.
 to which upload server.
 
 4. Client provides this library with uploading tasks specifying parts of data which are necessary to upload
-and uploading targets specifying how this data should flow into uploading servers. Usually a file goes to only its own uploading server,
-but it can be split between multiple uploading servers when downloading by multiple clients or via not HTTP-based protocol.
+and uploading targets specifying how this data should flow into uploading servers.
+
+Usually a file goes to only its own uploading server,
+but it can be split between multiple uploading servers when downloading by multiple clients.
+
 
 
